@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sih_25058/screens/Login_screenn.dart';
 
 class UserProfileScreen extends StatelessWidget {
   const UserProfileScreen({super.key});
@@ -131,7 +132,7 @@ class UserProfileScreen extends StatelessWidget {
                           borderRadius: BorderRadius.circular(12)),
                     ),
                     onPressed: () {
-                      // Logout Action
+                      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>LoginScreen()));
                     },
                     icon: const Icon(Icons.logout),
                     label: Text("Logout",

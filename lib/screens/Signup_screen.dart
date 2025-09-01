@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sih_25058/screens/Login_screenn.dart';
 import 'package:sih_25058/screens/homescreen.dart';
 
 class SignupScreen extends StatelessWidget {
@@ -134,7 +135,7 @@ class SignupScreen extends StatelessWidget {
                       const Text("Already have an account? "),
                       GestureDetector(
                         onTap: () {
-                          Navigator.pop(context);
+                          Navigator.pushReplacement(context , MaterialPageRoute(builder: (context)=> LoginScreen()));
                         },
                         child: const Text(
                           "Login",

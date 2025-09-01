@@ -92,7 +92,7 @@ class HomeScreen extends StatelessWidget {
             ),
             SizedBox(height: height * 0.01),
             Text(
-              "Here’s your device overview",
+              "Welcome to Dashboard ",
               style: TextStyle(
                 fontSize: width * 0.04,
                 color: Colors.grey[600],
@@ -101,28 +101,28 @@ class HomeScreen extends StatelessWidget {
             SizedBox(height: height * 0.03),
 
             // --- SEARCH BAR ---
-            Container(
-              padding: EdgeInsets.symmetric(horizontal: width * 0.04),
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(12),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.black12,
-                    blurRadius: 6,
-                    offset: const Offset(0, 3),
-                  ),
-                ],
-              ),
-              child: TextField(
-                decoration: InputDecoration(
-                  hintText: "Search devices...",
-                  border: InputBorder.none,
-                  icon: Icon(Icons.search, color: Colors.grey[600]),
-                ),
-              ),
-            ),
-            SizedBox(height: height * 0.03),
+            // Container(
+            //   padding: EdgeInsets.symmetric(horizontal: width * 0.04),
+            //   decoration: BoxDecoration(
+            //     color: Colors.white,
+            //     borderRadius: BorderRadius.circular(12),
+            //     boxShadow: [
+            //       BoxShadow(
+            //         color: Colors.black12,
+            //         blurRadius: 6,
+            //         offset: const Offset(0, 3),
+            //       ),
+            //     ],
+            //   ),
+            //   child: TextField(
+            //     decoration: InputDecoration(
+            //       hintText: "Search devices...",
+            //       border: InputBorder.none,
+            //       icon: Icon(Icons.search, color: Colors.grey[600]),
+            //     ),
+            //   ),
+            // ),
+            // SizedBox(height: height * 0.03),
 
             // --- STATS SECTION (Responsive Grid) ---
             GridView.count(
@@ -135,7 +135,7 @@ class HomeScreen extends StatelessWidget {
                 buildStatCard("Devices", "12", Icons.devices, Colors.blue, width),
                 buildStatCard("Alerts", "3", Icons.warning_amber, Colors.red, width),
                 buildStatCard("Healthy", "9", Icons.verified, Colors.green, width),
-                buildStatCard("Reports", "-", Icons.bar_chart, Colors.orange, width),
+                buildStatCard("New Registration", "+", Icons.add_business_sharp, Colors.orange, width),
               ],
             ),
             SizedBox(height: height * 0.03),
