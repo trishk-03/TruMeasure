@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:sih_25058/screens/alertscreen.dart';
+import 'package:sih_25058/screens/healthyscreen.dart';
+import 'package:sih_25058/screens/totaldevicesscreen.dart';
 import 'package:sih_25058/screens/user_info.dart';
 import 'package:sih_25058/ui_helper/widgets.dart';
+import 'package:sih_25058/screens/registration.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -132,10 +135,21 @@ class HomeScreen extends StatelessWidget {
               crossAxisSpacing: 12,
               mainAxisSpacing: 12,
               children: [
-                buildStatCard("Devices", "12", Icons.devices, Colors.blue, width),
-                buildStatCard("Alerts", "3", Icons.warning_amber, Colors.red, width),
-                buildStatCard("Healthy", "9", Icons.verified, Colors.green, width),
-                buildStatCard("New Registration", "+", Icons.add_business_sharp, Colors.orange, width),
+                GestureDetector(child: buildStatCard("Devices", "12", Icons.devices, Colors.blue, width),
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>TotalDevicesScreen()));
+                },),
+                GestureDetector(child: buildStatCard("Healthy", "9", Icons.verified, Colors.green, width), 
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>HealthyDevicesScreen()));
+                },),
+                GestureDetector(child: buildStatCard("Alerts", "3", Icons.warning_amber, Colors.red, width), onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>AlertsScreen()));
+                },),
+                GestureDetector(child: buildStatCard("New Registration", "+", Icons.add_business_sharp, Colors.orange, width),
+                  onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>RegistrationScreen()));
+                  },),
               ],
             ),
             SizedBox(height: height * 0.03),

@@ -12,7 +12,9 @@ class AlertsScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Recent Alerts"),
+        title: const Text("Recent Alerts", style: TextStyle(fontWeight: FontWeight.bold,
+            fontSize: 22,
+            color: Colors.white)),
         centerTitle: true,
         backgroundColor: Colors.blue[900],
       ),
